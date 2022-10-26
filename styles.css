@@ -1,0 +1,249 @@
+:root {
+  --text-color: #dce4e3;
+  --green: #18c29c;
+  --light-green: #8ed7c6;
+  --light-grey: #dce4e3;
+  --body-bg-color: #010016;
+  --title-font-family: "Fredoka One", cursive;
+  --text-font-family: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--text-font-family);
+  background: var(--light-grey);
+}
+
+.sidebar {
+  width: 50px;
+  height: 100vh;
+  position: fixed;
+  padding: 5px 10px;
+  background: var(--body-bg-color);
+  transition: all 0.5s ease;
+}
+
+.sidebar.active {
+  width: 300px;
+}
+
+.sidebar .menu-button {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 18px;
+  padding: 0 5px;
+  color: var(--text-color);
+  border-radius: 15px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.sidebar.active .menu-button {
+  right: 5px;
+}
+
+.sidebar .menu-button:hover {
+  color: var(--body-bg-color);
+  background: var(--light-grey);
+}
+
+.sidebar .nav-button-list {
+  margin-top: 60px;
+}
+
+.sidebar.active .nav-button-list .nav-button {
+  width: 100%;
+  position: relative;
+  line-height: 60px;
+  list-style: none;
+}
+
+.sidebar .nav-button-list .nav-button {
+  width: 90%;
+  position: relative;
+  margin-left: 5px;
+  line-height: 60px;
+  list-style: none;
+}
+
+.sidebar .nav-button-list .nav-button:first-child {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 83%;
+  margin-bottom: 5px;
+}
+
+.sidebar .nav-button-list .nav-button:first-child i {
+  position: absolute;
+  font-size: 1.5rem;
+  margin-left: 15px;
+  color: var(--body-bg-color);
+  cursor: pointer;
+  z-index: 99;
+}
+
+.sidebar.active .nav-button-list .nav-button input {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  font-size: 1.5rem;
+  top: 0;
+  left: 0;
+  padding-left: 50px;
+  color: var(--body-bg-color);
+  background: var(--light-grey);
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  transition: all 0.5s ease;
+}
+
+.sidebar .nav-button-list .nav-button input {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  font-size: 1.5rem;
+  top: 0;
+  left: 0;
+  padding-left: 50px;
+  color: var(--body-bg-color);
+  background: var(--light-grey);
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  transition: all 0.5s ease;
+}
+
+.sidebar .nav-button-list .nav-button a {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  gap: 5px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--text-color);
+  border-radius: 15px;
+  transition: all 0.2s ease;
+}
+
+.sidebar .nav-button-list .nav-button a span {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active .nav-button-list .nav-button a span {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar .nav-button-list .nav-button a:hover {
+  color: var(--body-bg-color);
+  background: var(--light-grey);
+}
+
+.sidebar .nav-button-list .nav-button .tooltip {
+  height: 40px;
+  width: 120px;
+  position: absolute;
+  transform: translateY(-50%);
+  font-weight: 700;
+  text-align: center;
+  top: 50%;
+  left: 50px;
+  line-height: 40px;
+  color: var(--body-bg-color);
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar .nav-button-list .nav-button:hover .tooltip {
+  top: 0;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active .nav-button-list .nav-button .tooltip {
+  opacity: 0;
+}
+
+.sidebar .log-out-button {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  font-size: 1.5rem;
+  right: 30%;
+  bottom: 15px;
+  padding: 5px 5px;
+  gap: 5px;
+  color: var(--text-color);
+
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.sidebar.active .log-out-button {
+  right: 5px;
+}
+
+.sidebar .log-out-button span {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active .log-out-button span {
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.5s ease;
+}
+
+.sidebar .log-out-button i:hover {
+  cursor: pointer;
+}
+
+.sidebar.active .log-out-button:hover {
+  color: var(--body-bg-color);
+  background: var(--light-grey);
+  cursor: pointer;
+}
+
+.sidebar .log-out-button .tooltip {
+  height: 40px;
+  width: 120px;
+  position: absolute;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  top: 50%;
+  left: 95px;
+  line-height: 40px;
+  color: var(--body-bg-color);
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar .log-out-button:hover .tooltip {
+  top: 0;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active .log-out-button .tooltip {
+  opacity: 0;
+}

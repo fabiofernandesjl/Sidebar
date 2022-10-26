@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="menu-button">
+        <i class="bx bx-menu"></i>
+      </div>
+      <ul class="nav-button-list">
+        <li class="nav-button">
+          <i class="bx bx-search"></i>
+          <input type="text" placeholder="Procurar..." />
+        </li>
+        <li class="nav-button">
+          <a href="">
+            <i class="bx bxs-home"></i>
+            <span>Início</span>
+          </a>
+          <span class="tooltip">Início</span>
+        </li>
+        <li class="nav-button">
+          <a href="">
+            <i class="bx bxs-bell"></i>
+            <span>Notificações</span>
+          </a>
+          <span class="tooltip">Notificações</span>
+        </li>
+        <li class="nav-button">
+          <a href="">
+            <i class="bx bxs-chat"></i>
+            <span>Mensagens</span>
+          </a>
+          <span class="tooltip">Mensagens</span>
+        </li>
+        <li class="nav-button">
+          <a href="">
+            <i class="bx bxs-star"></i>
+            <span>Favoritos</span>
+          </a>
+          <span class="tooltip">Favoritos</span>
+        </li>
+        <li class="nav-button">
+          <a href="">
+            <i class="bx bxs-user"></i>
+            <span>Perfil</span>
+          </a>
+          <span class="tooltip">Perfil</span>
+        </li>
+        <li class="nav-button">
+          <a href="">
+            <i class="bx bxs-cog"></i>
+            <span>Configurações</span>
+          </a>
+          <span class="tooltip">Configurações</span>
+        </li>
+        <li class="nav-button">
+          <a href="">
+            <i class="bx bx-support"></i>
+            <span>Suporte</span>
+          </a>
+          <span class="tooltip">Suporte</span>
+        </li>
+      </ul>
+      <div class="log-out-button">
+        <span>Sair</span>
+        <i class="bx bx-log-out"></i>
+        <span class="tooltip">Sair</span>
+      </div>
+    </aside>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
